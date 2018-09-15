@@ -25,7 +25,7 @@ module.exports = merge(common, {
       },
       {
         test: /\.html$/,
-        loader: "raw-loader"
+        loader: "html-loader"
       }
     ]
   }
