@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Production',
+      title: 'Welcome',
       chunks: ['index'],
       template: './src/template.html'
     }),
@@ -24,5 +24,15 @@ module.exports = {
   output: {
     filename: 'js/[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
   }
 };

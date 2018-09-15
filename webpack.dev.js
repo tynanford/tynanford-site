@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = merge(common, {
@@ -25,7 +26,10 @@ module.exports = merge(common, {
       },
       {
         test: /\.html$/,
-        loader: "html-loader"
+        loader: "html-loader",
+        options: {
+          root: path.resolve(__dirname, 'src')
+        }
       }
     ]
   }
