@@ -31,7 +31,7 @@ $input-shadow: none;
 @import "../../node_modules/bulma/sass/layout/_all.sass";
 @import "../../node_modules/bulma/sass/components/_all.sass";
 @import "../../node_modules/bulma/sass/grid/_all.sass";
-
+@import "../../node_modules/bulma-accordion/dist/css/bulma-accordion.sass";
 
 .section {
   background-color: $grey-color;  
@@ -41,3 +41,6 @@ $input-shadow: none;
   color: $link;
 }
 
+.level-item {
+  justify-content: center;
+}

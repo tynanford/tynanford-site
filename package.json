@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "bulma": "^0.7.1",
+    "bulma-accordion": "^2.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "ejs": "^2.6.1",
