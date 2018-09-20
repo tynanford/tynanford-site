@@ -2,59 +2,208 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container is-blue">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src=<%=require('./logo.png')%> width="160px"
-            height="160px" />
+          <a class="navbar-item" href="#hero">
+            <!-- <img src=<%=require('./logo.png')%> /></ -->
+            <img src='./logo.png' class="image"/>
           </a>
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <div class="navbar-burger" id="nav-toggle" >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </div>
         </div>
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <div class="box"><a class="navbar-item" href="index.html">Home</a></div>
-            <a class="navbar-item" href="about.html">About</a>
-            <a class="navbar-item" href="skills.html">Skills</a>
-            <a class="navbar-item" href="adventures.html">Adventures</a>
-            <a class="navbar-item" href="contact.html">Contact</a>
+        <div class="navbar-menu" id="nav-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#about">About</a>
+            <a class="navbar-item" href="#experience">Experience</a>
+            <a class="navbar-item" href="#skills">Skills</a>
+            <a class="navbar-item" href="#adventures">Adventures</a>
+            <a class="navbar-item" href="#contact">Contact</a>
           </div>
         </div>
       </div>
     </nav>
-    <div class="container has-text-centered">
-      <h1 class="title is-centered">Hello, I'm Tynan from Michigan</h1>
 
-      <p class="subtitle">Welcome to my website -  work in progress :)</p>
-
-      <p>Michigan State 2018 computer science</p>
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" placeholder="Input">
+    <section class="hero is-primary is-fullheight is-bold" id="hero">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">
+            Hello, I'm Tynan!
+          </h1>
+          <h3 class="subtitle is-3">
+            I am a software developer looking for cool things to work on
+          </h3>
         </div>
       </div>
+    </section>
 
-      <div class="field">
-        <p class="control">
-        <span class="select">
-          <select>
-            <option>Select dropdown</option>
-          </select>
-        </span>
-        </p>
+
+    <section id="about" class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-2">
+          About
+        </h2>
+      </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half">
+            <div class="content">
+            <p class="is-size-5">
+              This May, I graduated with a Computer Science degree from 
+              Michigan State University. I started out as a business
+              major but everything changed during my sophomore year, when I
+              wrote my first python program. I've been hooked since :)
+            </p>
+            <p class="is-size-5">
+            I currently work at the <a href="frib.msu.edu"
+            target="_blank">Facility for Rare Isotope Beams</a> and am
+              looking for new opportunties to add to my skillset.
+            </p>
+            <p class="is-size-5">
+              I my free time I like to spend time outside, read, and hang 
+              with my family, friends, and pets!
+            </div>
+          </div>
+          <div class="column is-half">
+            <figure class="image is-3by4" >
+              <img src="./yellowstone.jpg" alt="Yellowstone" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="experience" class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-2">
+          Experience
+        </h2>
+      </div>
+      <div class="container">
+        <div class="content">
+          <p class="is-size-5">
+            <a href="http://frib.msu.edu" target="_blank">
+              Facility For Rare Isotope Beams 
+            </a>
+          </p>
+          <p class="is-size-6">
+            Student Technical Aide (Aug 2017 - June 2018)
+          </p>
+          <p class="is-size-6">
+            Technical Aide (July 2018 - Present)
+          </p>
+          <p class="is-size-5">
+            <a href="http://bsasoftware.com" target="_blank">
+              BS&A Software
+            </a>
+          </p>
+          <p class="is-size-6">
+            Software Development Intern (May 2017 - August 2017)
+          </p>
+          <p class="is-size-5">
+            <a href="https://global.broad.msu.edu/ibc/" target="_blank">
+              Michigan State International Business Center
+            </a>
+          </p>
+          <p class="is-size-6">
+            Student Research Assistant (August 2013 - May 2017)
+          </p>
+          <p class="is-size-5">
+            <a href="https://www.auto-owners.com/" target="_blank">
+              Auto-Owners Insurance Company
+            </a>
+          </p>
+          <p class="is-size-6">
+            Claims Systems Development Intern (May 2015 - January 2016)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-2">
+          Skills
+        </h2>
+      </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <h4 class="is-4">Programming Languages</h4>
+                <ul>Python</ul>
+                <ul>C++</ul>
+                <ul>C#</ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <h4 class="is-4">Technologies</h4>
+                <ul>EPICS</ul>
+                <ul>C++</ul>
+                <ul>C#</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="adventures" class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-2">
+         Adventures 
+        </h2>
+      </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half">
+            <figure class="image is-3by4" >
+              <img src="./golden_gate.jpg" alt="Me and my friend Alpha!" />
+            </figure>
+          </div>
+          <div class="column is-half">
+            <p class="is-size-5">
+              I love to travel and explore new places! I have taken a month
+              long road trip out west, backpacked in the Sispey Wilderness,
+              and hope to do a lot more!
+            </p>
+            <a class="button is-link" href="adventures.html">See where I've
+              been so far</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-2">
+         Contact 
+        </h2>
       </div>
 
-      <div class="buttons">
-        <a class="button is-primary">Primary</a>
-        <a class="button is-link">Link</a>
+    </section>
+
+    <footer class="footer">
+      <div class="columns">
+        <div class="column is-10">
+          <p>© 2018 Tynan Ford</p>
+        </div>
+        <div class="column is-2">
+      <a href="https://bulma.io" target="_blank">
+        <img src="./made-with-bulma.png" alt="Made with Bulma" width="256" height="48" class="image"/>
+      </a>
+
+        </div>
       </div>
-    </div>
+    </footer>
+
   </body>
 </html>

@@ -19,7 +19,7 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $grey-color;
+//$body-background-color: $grey-color;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
@@ -27,9 +27,17 @@ $input-shadow: none;
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
-@import "../../node_modules/bulma/sass/elements/button.sass";
-@import "../../node_modules/bulma/sass/elements/container.sass";
-@import "../../node_modules/bulma/sass/elements/form.sass";
-@import "../../node_modules/bulma/sass/elements/title.sass";
-@import "../../node_modules/bulma/sass/layout/hero.sass";
-@import "../../node_modules/bulma/sass/layout/section.sass";
+@import "../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+
+
+.section {
+  background-color: $grey-color;  
+}
+
+.navbar-item {
+  color: $link;
+}
+

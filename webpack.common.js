@@ -1,24 +1,31 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
   entry: {
     index: './src/modules/index.js',
-    about: './src/modules/about.js'
+    adventures: './src/modules/adventure.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Welcome',
       chunks: ['index'],
-      template: './src/template.html'
+      template: './src/template.html',
+      favicon: './src/logo.png'
     }),
     new HtmlWebpackPlugin({
-      title: 'About',
-      chunks: ['about'],
-      filename: 'about.html',
-      template: './src/template.html'
+      title: 'Adventures',
+      chunks: ['adventures'],
+      filename: 'adventures.html',
+      template: './src/adventure.html',
+      favicon: './src/logo.png'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
   output: {
