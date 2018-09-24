@@ -18,6 +18,6 @@ module.exports = merge(common, {
     }]
   },
   plugins: [
-    new ExtractTextPlugin('css/mystyles.css'),
+    new ExtractTextPlugin('css/mystyles-[md5:contenthash:hex:20].css'),
   ]
 });

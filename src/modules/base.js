@@ -16,6 +16,11 @@ function toggleNav() {
     }
 }
 
+function turnOffNav() {
+    var nav = document.getElementById("nav-menu");
+    nav.className = "navbar-menu";
+}
+
 $(document).ready(function(){
   $("a").on('click', function(event) {
 
@@ -25,11 +30,9 @@ $(document).ready(function(){
       var hash = this.hash;
 
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 500, function(){
-   
-        window.location.hash = hash;
-      });
+        scrollTop: $(hash).offset().top,
+        complete: turnOffNav()
+      },'slow'); 
     } 
   });
 });

@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Welcome',
+      title: 'Tynan Ford | Software Developer',
       chunks: ['index'],
       template: './src/template.html',
       favicon: './src/logo.png'
@@ -29,7 +29,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: 'js/[name].bundle.js',
+    filename: 'js/[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
