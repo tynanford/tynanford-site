@@ -4,6 +4,7 @@ import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.
 require('../../node_modules/leaflet/dist/leaflet.js');
 require('../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js');
 import westTrip from './westTrip.json';
+require('./SnakeAnim.js');
 
 if (process.env.NODE_ENV === 'development') {
   require('../adventure.html')
@@ -41,7 +42,7 @@ function initmap() {
   //var marker = L.marker([39.5, -97]).addTo(map);
   //marker.bindPopup("Tynan Ford");
 
-  L.geoJSON(westTrip).addTo(map);
+  L.geoJSON(westTrip).addTo(map).snakeIn();
 
 }; 
 
