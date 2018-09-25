@@ -29,7 +29,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: 'js/[name].[contenthash].bundle.js',
+    filename: 'js/[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -38,6 +38,13 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
         ]
       }
     ]

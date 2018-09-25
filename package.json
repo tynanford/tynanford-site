@@ -33,6 +33,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "leaflet-routing-machine": "^3.2.11",
     "lodash": "^4.17.11"
   }
 }
