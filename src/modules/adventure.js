@@ -3,7 +3,7 @@ import '../../node_modules/leaflet/dist/leaflet.css';
 import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css';
 require('../../node_modules/leaflet/dist/leaflet.js');
 require('../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js');
-import geoJson from './westTrip.js';
+import westTrip from './westTrip.json';
 
 if (process.env.NODE_ENV === 'development') {
   require('../adventure.html')
@@ -26,7 +26,7 @@ function initmap() {
   
 	// set up the map
 	map = new L.Map('map', {
-    center: [39.5, -97],
+    center: [39.5, -96.5],
     zoom: 4.5,
     zoomSnap: 0
   });
@@ -41,8 +41,7 @@ function initmap() {
   //var marker = L.marker([39.5, -97]).addTo(map);
   //marker.bindPopup("Tynan Ford");
 
-  console.log(geoJson);
-  L.geoJSON(geoJson).addTo(map);
+  L.geoJSON(westTrip).addTo(map);
 
 }; 
 
