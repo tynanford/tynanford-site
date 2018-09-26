@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#002626",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "LaCrosse!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.2751007080078,
+          43.86869317427787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#002626"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.33009338378905,
+          43.90185050527358
+        ]
+      }
+    }
+  ]
+}

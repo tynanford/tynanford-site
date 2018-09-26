@@ -1,10 +1,9 @@
-require('./base.js');
 import '../../node_modules/leaflet/dist/leaflet.css';
-import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css';
 require('../../node_modules/leaflet/dist/leaflet.js');
-require('../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js');
-import westTrip from './westTrip.json';
+require('./base.js');
 require('./SnakeAnim.js');
+import westTrip from './westTrip.json';
+import westTripMarkers from './westTripMarkers.json';
 
 if (process.env.NODE_ENV === 'development') {
   require('../adventure.html')
@@ -41,10 +40,41 @@ function initmap() {
 
   //var marker = L.marker([39.5, -97]).addTo(map);
   //marker.bindPopup("Tynan Ford");
+  var myStyle = {
+      "color": "#f18805",
+      "weight": 3,
+      "opacity": 0.65,
+      "snakingSpeed": 500
+  };
 
-  L.geoJSON(westTrip).addTo(map).snakeIn();
+  L.geoJSON(westTrip, {
+    style: myStyle 
+  }).addTo(map).snakeIn();
+
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+  L.geoJSON(westTripMarkers, {
+      onEachFeature: onEachFeature,
+      pointToLayer: function (feature, latlng) {
+          return L.marker(latlng, geojsonMarkerOptions);
+      }
+  }).addTo(map);
 
 }; 
 
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
 
 initmap()
