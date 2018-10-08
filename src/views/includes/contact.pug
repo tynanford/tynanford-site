@@ -1,0 +1,27 @@
+section#contact.section
+  .container.has-text-centered
+    h2.title.is-2
+      | Say Hello!
+    p
+  .container
+    .columns
+      .column.is-2
+      .column.is-8
+        form#contactForm
+          .field
+            label.label Name
+            .control
+              input.input(name='name', type='text', placeholder='Enter name here...', required='')
+          .field
+            label.label Email Address
+            .control
+              input.input(type='email', placeholder='Enter email here...', name='email', required='')
+          .field
+            label.label Message
+            .control
+              textarea.textarea(name='content', placeholder='Enter message...', required='')
+          #toast
+          .field.is-grouped
+            .control
+              button#submit.button.is-link(type='submit') Submit
+

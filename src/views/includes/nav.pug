@@ -1,0 +1,17 @@
+nav.navbar.is-fixed-top(aria-label='main navigation')
+  .container
+    .navbar-brand
+      a.navbar-item(href='#hero')
+        // <img src=<%=require('./logo.png')%> />
+        img.image(src='./logo.png', alt='Logo')
+      #nav-toggle.navbar-burger
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+    #nav-menu.navbar-menu
+      .navbar-end
+        a.navbar-item(href='#about') About
+        a.navbar-item(href='#skills') Skills
+        a.navbar-item(href='#experience') Experience
+        a.navbar-item(href='#adventures') Adventures
+        a.navbar-item(href='#contact') Contact

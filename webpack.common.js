@@ -13,8 +13,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Tynan Ford | Software Developer',
       chunks: ['index'],
-      template: './src/template.html',
-      favicon: './src/logo.png'
+      template: './src/views/template.pug',
+      favicon: './src/logo.png',
+      filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Adventures',
@@ -46,7 +47,25 @@ module.exports = {
           'style-loader',
           'css-loader',
         ]
+      },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-loader',
+            query: {
+              pretty: true,
+              data: {
+                test: 'asdf'
+              }
+            }
+          } 
+        ]
       }
     ]
   }
 };
+
+node: {
+  fs: 'empty'
+}

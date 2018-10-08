@@ -5,7 +5,16 @@ import bulmaAccordion from '../../node_modules/bulma-accordion/dist/js/bulma-acc
 require('../yellowstone.jpg');
 
 if (process.env.NODE_ENV === 'development') {
-  require('../template.html')
+  require('../views/template.pug')
+  require('../views/includes/head.pug')
+  require('../views/includes/nav.pug')
+  require('../views/includes/hero.pug')
+  require('../views/includes/about.pug')
+  require('../views/includes/skills.pug')
+  require('../views/includes/experience.pug')
+  require('../views/includes/adventure.pug')
+  require('../views/includes/contact.pug')
+  require('../views/includes/footer.pug')
 }
 
 document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
