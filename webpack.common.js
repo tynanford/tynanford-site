@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
 
 module.exports = {
@@ -8,12 +9,15 @@ module.exports = {
     index: './src/modules/index.js',
     adventures: './src/modules/adventure.js'
   },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()]
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Tynan Ford | Software Developer',
       chunks: ['index'],
-      template: './src/views/template.pug',
+      template: './src/views/index.pug',
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
@@ -52,10 +56,7 @@ module.exports = {
           {
             loader: 'pug-loader',
             query: {
-              pretty: true,
-              data: {
-                test: 'asdf'
-              }
+              pretty: true
             }
           } 
         ]

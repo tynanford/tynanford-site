@@ -1,10 +1,10 @@
-import _ from 'lodash';
 require('./base.js');
 require('../../node_modules/bulma-accordion/dist/js/bulma-accordion.min.js');
 import bulmaAccordion from '../../node_modules/bulma-accordion/dist/js/bulma-accordion.min.js'
 
 if (process.env.NODE_ENV === 'development') {
-  require('../views/template.pug')
+  require('../views/index.pug')
+  require('../views/layout.pug')
   require('../views/includes/head.pug')
   require('../views/includes/nav.pug')
   require('../views/includes/hero.pug')
@@ -16,6 +16,26 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/footer.pug')
 }
 
+function turnOffNav() {
+    var nav = document.getElementById("nav-menu");
+    nav.className = "navbar-menu";
+}
+
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top,
+        complete: turnOffNav()
+      },'slow'); 
+    } 
+  });
+});
 document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
 function toggleNav() {
     var nav = document.getElementById("nav-menu");
@@ -51,7 +71,7 @@ function post(url, body, callback) {
   req.send(JSON.stringify(body));
 }
 function success () {
-  toast.innerHTML = 'Thanks for sending me a message! I\'ll get in touch with you ASAP. :)'
+  toast.innerHTML = 'Thanks for sending me a message! I\'ll get in touch with you soon. :)'
   submit.disabled = false
   submit.blur()
   form.name.focus()

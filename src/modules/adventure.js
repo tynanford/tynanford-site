@@ -1,12 +1,16 @@
+require('./base.js');
 import '../../node_modules/leaflet/dist/leaflet.css';
 require('../../node_modules/leaflet/dist/leaflet.js');
-require('./base.js');
 require('./SnakeAnim.js');
 import westTrip from './westTrip.json';
 import westTripMarkers from './westTripMarkers.json';
 
 if (process.env.NODE_ENV === 'development') {
   require('../views/adventure.pug')
+  require('../views/layout.pug')
+  require('../views/includes/head.pug')
+  require('../views/includes/footer.pug')
+  require('../views/includes/adventure-page.pug')
 }
 
 var map;
@@ -38,8 +42,6 @@ function initmap() {
       accessToken: 'pk.eyJ1IjoidHluYW5mb3JkIiwiYSI6ImNqbWd5OG4wbTdhY2szcHA0ZTQycjQxN2sifQ.j-Q0ol0KCdnQcjky7ULD0g'
   }).addTo(map);
 
-  //var marker = L.marker([39.5, -97]).addTo(map);
-  //marker.bindPopup("Tynan Ford");
   var myStyle = {
       "color": "#f18805",
       "weight": 3,
