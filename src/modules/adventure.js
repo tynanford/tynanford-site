@@ -6,7 +6,7 @@ import westTrip from './westTrip.json';
 import westTripMarkers from './westTripMarkers.json';
 
 if (process.env.NODE_ENV === 'development') {
-  require('../adventure.html')
+  require('../views/adventure.pug')
 }
 
 var map;

@@ -1,6 +1,4 @@
 import '../styles/style.scss';
-require('../logo.png');
-
 
 function turnOffNav() {
     var nav = document.getElementById("nav-menu");

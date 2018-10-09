@@ -2,8 +2,7 @@ nav.navbar.is-fixed-top(aria-label='main navigation')
   .container
     .navbar-brand
       a.navbar-item(href='#hero')
-        // <img src=<%=require('./logo.png')%> />
-        img.image(src='./logo.png', alt='Logo')
+        img.image(src=require('../../images/logo.png'), alt='Logo')
       #nav-toggle.navbar-burger
         span(aria-hidden='true')
         span(aria-hidden='true')

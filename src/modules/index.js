@@ -2,7 +2,6 @@ import _ from 'lodash';
 require('./base.js');
 require('../../node_modules/bulma-accordion/dist/js/bulma-accordion.min.js');
 import bulmaAccordion from '../../node_modules/bulma-accordion/dist/js/bulma-accordion.min.js'
-require('../yellowstone.jpg');
 
 if (process.env.NODE_ENV === 'development') {
   require('../views/template.pug')

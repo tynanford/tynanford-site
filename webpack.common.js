@@ -14,15 +14,13 @@ module.exports = {
       title: 'Tynan Ford | Software Developer',
       chunks: ['index'],
       template: './src/views/template.pug',
-      favicon: './src/logo.png',
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Adventures',
       chunks: ['adventures'],
       filename: 'adventures.html',
-      template: './src/adventure.html',
-      favicon: './src/logo.png'
+      template: './src/views/adventure.pug'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -65,7 +63,3 @@ module.exports = {
     ]
   }
 };
-
-node: {
-  fs: 'empty'
-}
