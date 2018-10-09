@@ -11,17 +11,22 @@ section#contact.section
           .field
             label.label Name
             .control
-              input.input(name='name', type='text', placeholder='Enter name here...', required='')
+              input#name-input.input(name='name', type='text', placeholder='Enter name here...')
+            p#namehelp.help 
           .field
             label.label Email Address
             .control
-              input.input(type='email', placeholder='Enter email here...', name='email', required='')
+              input#email-input.input(type='text', placeholder='Enter email here...', name='email')
+            p#emailhelp.help 
           .field
             label.label Message
             .control
-              textarea.textarea(name='content', placeholder='Enter message...', required='')
+              textarea#message-input.textarea(name='content', placeholder='Enter message...')
+            p#messagehelp.help 
           #toast
           .field.is-grouped
             .control
               button#submit.button.is-link(type='submit') Submit
+            .control
+              button#cancel.button.is-white Cancel
 
