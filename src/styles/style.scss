@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Bitter');
+//@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+
 
 // Set your brand colors
 $navy-color: rgba(0, 38, 38, 1);
@@ -11,7 +16,7 @@ $light-blue-color: rgba(80, 201, 206, 1);
 $grey-color: rgba(239, 231, 218, 1);
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: 'Cabin', sans-serif;
 $primary: $blue-color;
 $link: $orange-color;
 $info: $light-blue-color;
@@ -35,8 +40,10 @@ $accordion-header-background-color: $primary;
 @import "../../node_modules/bulma/sass/elements/title.sass";
 @import "../../node_modules/bulma/sass/elements/form.sass";
 @import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/box.sass";
 @import "../../node_modules/bulma/sass/layout/_all.sass";
 @import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/card.sass";
 @import "../../node_modules/bulma/sass/components/level.sass";
 @import "../../node_modules/bulma/sass/grid/columns.sass";
 @import "../../node_modules/bulma-accordion/dist/css/bulma-accordion.sass";

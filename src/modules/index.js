@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/about.pug')
   require('../views/includes/skills.pug')
   require('../views/includes/experience.pug')
+  require('../views/includes/school.pug')
   require('../views/includes/adventure.pug')
   require('../views/includes/contact.pug')
   require('../views/includes/footer.pug')
