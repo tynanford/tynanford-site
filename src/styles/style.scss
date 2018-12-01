@@ -49,6 +49,7 @@ $modal-content-width: 1000px;
 @import "../../node_modules/bulma/sass/components/card.sass";
 @import "../../node_modules/bulma/sass/components/level.sass";
 @import "../../node_modules/bulma/sass/grid/columns.sass";
+@import "../../node_modules/bulma/sass/grid/tiles.sass";
 @import "../../node_modules/bulma-accordion/dist/css/bulma-accordion.sass";
 @import "../../node_modules/bulma-carousel/dist/css/bulma-carousel.min.css";
 $fa-font-path: "~font-awesome/fonts";
@@ -70,3 +71,8 @@ $fa-font-path: "~font-awesome/fonts";
   z-index: 1;
 }
 
+.tile {
+  border-radius: 5px;
+  padding: .7rem;
+  color: white;
+}
