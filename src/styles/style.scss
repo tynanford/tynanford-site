@@ -46,6 +46,7 @@ $accordion-header-background-color: $primary;
 @import "../../node_modules/bulma/sass/components/card.sass";
 @import "../../node_modules/bulma/sass/components/level.sass";
 @import "../../node_modules/bulma/sass/grid/columns.sass";
+@import "../../node_modules/bulma/sass/grid/tiles.sass";
 @import "../../node_modules/bulma-accordion/dist/css/bulma-accordion.sass";
 
 .section {
@@ -62,4 +63,10 @@ $accordion-header-background-color: $primary;
 
 #map {
   height: 640px;
+}
+
+.tile {
+  border-radius: 5px;
+  padding: .7rem;
+  color: white;
 }
