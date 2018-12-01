@@ -4,29 +4,248 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#002626",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "popupContent": "LaCrosse!"
+        "popupContent": "Badlands National Park",
+        "modal": "badlandModal"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -91.2751007080078,
-          43.86869317427787
+          -102.27859497070312,
+          43.71354951931429
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#002626"
+        "popupContent": "Yellowstone National Park",
+        "modal": "yellowstoneModal"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -102.33009338378905,
-          43.90185050527358
+          -110.60897827148438,
+          44.56307730757893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "Grand Teton National Park",
+        "modal": "tetonModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.63987731933594,
+          43.89690282163987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "Seattle",
+        "modal": "seattleModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.32864379882811,
+          47.60523713135211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "Mount Hood",
+        "modal": "mountHoodModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.68731689453125,
+          45.37144349133922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "Avenue of the Giants",
+        "modal": "giantsModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.90209197998047,
+          40.293667908550084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "Route 1",
+        "modal": "route1Modal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.60717773437499,
+          38.82152104968419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "San Francisco",
+        "modal": "sanFranModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41893768310548,
+          37.778584505321376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Downtown Los Angeles",
+        "modal": "laModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.23829650878906,
+          34.050952698832965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Santa Monica Beach",
+        "modal": "santaMonicaModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.49681854248047,
+          34.00969645770158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Grand Canyon",
+        "modal": "grandCanyonModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00836181640625,
+          35.9902298150617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Monument Valley",
+        "modal": "mValleyModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.1496124267578,
+          37.016260462967274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Mesa Verde National Park",
+        "modal": "mesaVerdeModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.45565795898438,
+          37.24891436763243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Cheyenne Mountain State Park",
+        "modal": "rockiesModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.83943939208984,
+          38.72917941323977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Mississippi River",
+        "modal": "mississippiModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.26239776611328,
+          43.809880174692225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "popupContent": "Oregon Coast",
+        "modal": "oregonCoastModal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96972656249999,
+          45.20816611702967
         ]
       }
     }

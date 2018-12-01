@@ -3,22 +3,430 @@ nav.navbar.is-fixed-top(role='navigation', aria-label='main navigation')
     .navbar-brand
       a.navbar-item(href='/')
         img(src=require('../../images/logo.png'))
+
+
+nav.navbar.is-fixed-top(aria-label='main navigation')
+  .container
+    .navbar-brand
+      a.navbar-item(href='/')
+        img.image(src=require('../../images/logo.png'), alt='Logo')
+      #nav-toggle.navbar-burger
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+    #nav-menu.navbar-menu
+      .navbar-end
+        a.navbar-item(href='/#about') About
+        a.navbar-item(href='/#skills') Skills
+        a.navbar-item(href='/#experience') Experience
+        a.navbar-item(href='/#school') School
+        a.navbar-item(href='/#adventures') Adventures
+        a.navbar-item(href='/#contact') Contact
 section#hero.hero.is-primary.is-medium.is-bold
   .hero-body
     .container.has-text-centered
       h1.title.is-1
-        | The adventure page is under construction
+        | Out West Road Trip! 
       h3.subtitle.is-3
-        | Come back later to check it out!
+        | 28 days on the road with my best friend Alpha 
 br
 section
-  .container
-    p
-    .level
-      .level-item.has-text-centered
-        a.button.is-link.is-large(href='/')
-          | Take Me Back to the Good Stuff
+  .container.has-text-centered
+    .content
+      .h3.is-size-3.has-text-link.has-text-weight-bold Click on the markers to see some of the photos I took!
+    
 section
   br
   .container
     #map
+
+.modal#mississippiModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Crossing the Mississippi at LaCrosse, WI. I was super excited in the beginning so I was taking lots of pictures 
+          .card-image
+            figure.image.is-16by9
+              img(src='' data-src=require('../../images/modal/mississippi.jpg'), alt='Mississippi River in LaCrosse, WI').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 2
+  button.modal-close.is-large#close-modal
+
+.modal#badlandModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Camping in Badlands National Park, South Dakota 
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/badlands.jpg'), alt='Badlands South Dakota').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/badland-bison.jpg'), alt='Bison at Badlands').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/badland-sunset.jpg'), alt='Sunset at Badlands').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Days 2-4
+  button.modal-close.is-large#close-modal
+
+.modal#yellowstoneModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Amazing time in Yellowstone National Park, Wyoming 
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/yellowstone-lake.jpg'), alt='Yellowstone Lake').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/yellowstone-canyon.jpg'), alt='Grand Canyon at Yellowstone').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/yellowstone-grand-pristine.jpg'), alt='Grand Pristine').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/yellowstone-river.jpg'), alt='Yellowstone River').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Days 5-8 
+  button.modal-close.is-large#close-modal
+
+
+.modal#tetonModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Cloudy day at Grand Teton National Park but was still incredible 
+          .card-image
+            figure.image.is-16by9
+              img(src='' data-src=require('../../images/modal/tetons.jpg'), alt='Grand Tetons').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 8
+  button.modal-close.is-large#close-modal
+
+
+.modal#seattleModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Back in civilization in Seattle.
+          .card-image
+            figure.image.is-16by9
+              img(src='' data-src=require('../../images/modal/seattle.jpg'), alt='Gas Works Seattle').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 11 
+  button.modal-close.is-large#close-modal
+
+
+.modal#mountHoodModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title My favorite place of the whole trip :) Mount Hood, Oregon
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mount-hood.jpg'), alt='Mount Hood').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/hood-camp.jpg'), alt='Campsite at Mount Hood').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/hood-waterfall.jpg'), alt='Sitting behind the waterfall').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Days 11-13 
+  button.modal-close.is-large#close-modal
+
+
+.modal#oregonCoastModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Seeing the Pacific in Oregon was the most amazing single thing I saw on the trip. Gave some prespective on how far we had driven.
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/oregon-rock.jpg'), alt='Pacific City Rock').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/oregon-waves.jpg'), alt='Pacific waves').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/oregon-pacific.jpg'), alt='Pacific Oregon').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/oregon-beach.jpg'), alt='Beach Oregon').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Day 16 
+  button.modal-close.is-large#close-modal
+
+.modal#giantsModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title BIG Trees! Avenue of the Giants, California
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/redwoods.jpg'), alt='Redwoods').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/redwoods-car.jpg'), alt='Redwood and a Ford Focus').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Day 17 
+  button.modal-close.is-large#close-modal
+
+.modal#route1Modal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Route 1, California. 7 hour drive along the Pacific. Views like this the entire time. :)
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/route1.jpg'), alt='Route 1').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/route1-wind.jpg'), alt='Pacific').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/route1-water.jpg'), alt='Big waves').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/route1-sunset.jpg'), alt='Sunset near Point Reyes').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Day 18 
+  button.modal-close.is-large#close-modal
+
+.modal#sanFranModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Toured San Francisco for a day. The Golden Gate Bridge is spectacular. Had the best Chinese food in my life for dinner.
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/san-fran-pacific.jpg'), alt='Golden Gate').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/chinatown.jpg'), alt='Chinatown').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mural.jpg'), alt='Mural in San Francisco').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Day 19 
+  button.modal-close.is-large#close-modal
+
+
+.modal#laModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header 
+            p.card-header-title Spent the night in downtown LA watching baseball. Impressed by the chillness of the city.
+          .card-image
+            figure.image.is-16by9
+              img(src='' data-src=require('../../images/modal/la-dodgers.jpg'), alt='Dodger stadium').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 20 
+  button.modal-close.is-large#close-modal
+
+
+.modal#santaMonicaModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Alpha and I spent an entire day on the beach relaxing and planning our next moves. The warm weather felt good after Wyoming and the Pacific Northwest.
+          .card-image
+            figure.image.is-4by3
+              img(src='' data-src=require('../../images/modal/la-beach.jpg'), alt='Me and Alpha at the beach').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 21
+  button.modal-close.is-large#close-modal
+
+.modal#grandCanyonModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Amazing views in Arizona and not too hot! 
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/grand-canyon.jpg'), alt='Grand Canyon').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/grand-canyon-river.jpg'), alt='Grand Canyon river view').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Days 23-24 
+  button.modal-close.is-large#close-modal
+
+.modal#mValleyModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Driving on roads from famous movies at the border of Arizona and Utah 
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/monument-valley-1.jpg'), alt='Monument Valley').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/monument-valley-2.jpg'), alt='Monument Valley').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Day 24 
+  button.modal-close.is-large#close-modal
+
+.modal#mesaVerdeModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header
+            p.card-header-title Meas Verde National Park, CO. Most surprising place of the trip. First thought of it just as a place to camp, but fell in love after a sunset hike up a mountain :) 
+          .card-image
+            .carousel.carousel-animated.carousel-animate-slide
+              .carousel-container
+                .carousel-item.has-background.is-active
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mesa-verde-mountains.jpg'), alt='Mesa Verde').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mesa-verde.jpg'), alt='Mesa Verde').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mesa-verde-me.jpg'), alt='Mesa Verde').lazy_load.is-background
+                .carousel-item.has-background
+                  figure.image.is-16by9
+                    img(src='' data-src=require('../../images/modal/mesa-verde-sunset.jpg'), alt='Mesa Verde').lazy_load.is-background
+              .carousel-navigation.is-centered
+                .carousel-nav-left
+                  i.fa.fa-chevron-left(aria-hidden="true")
+                .carousel-nav-right
+                  i.fa.fa-chevron-right(aria-hidden="true")
+          footer.card-footer
+            p.card-footer-item Days 24-25 
+  button.modal-close.is-large#close-modal
+
+
+.modal#rockiesModal
+  .modal-background
+  .modal-content
+    .cotainer
+      .card
+        .content
+          header.card-header 
+            p.card-header-title Didn't have time to drive up Pike's Peak but still got great views of the mountains in Colorado. I definately have to come back to explore more. 
+          .card-image
+            figure.image.is-16by9
+              img(src='' data-src=require('../../images/modal/rockies.jpg'), alt='Rockies').lazy_load
+          footer.card-footer
+            p.card-footer-item Day 26 
+  button.modal-close.is-large#close-modal
+

@@ -1,6 +1,8 @@
 require('./base.js');
 import '../../node_modules/leaflet/dist/leaflet.css';
 require('../../node_modules/leaflet/dist/leaflet.js');
+require('../../node_modules/bulma-carousel/dist/js/bulma-carousel.min.js');
+import bulmaCarousel from '../../node_modules/bulma-carousel/dist/js/bulma-carousel.min.js';
 require('./SnakeAnim.js');
 import westTrip from './westTrip.json';
 import westTripMarkers from './westTripMarkers.json';
@@ -12,6 +14,11 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/footer.pug')
   require('../views/includes/adventure-page.pug')
 }
+
+
+$(document).ready(function() { 
+  var carousels = bulmaCarousel.attach();
+});
 
 var map;
 var ajaxRequest;
@@ -75,8 +82,35 @@ var geojsonMarkerOptions = {
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
+        layer.bindPopup($('<a href="#" class="speciallink">'+feature.properties.popupContent+'</a>').click(function(event){
+          event.preventDefault();
+          openModal(feature.properties.modal);
+        })[0]);
     }
+}
+
+function openModal(modalID) {
+  $('.lazy_load').each(function(){
+      var img = $(this);
+      img.attr('src', img.data('src'));
+  });
+  var modal = document.querySelector('#' + modalID);
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+  modal.querySelector('#close-modal').addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+
 }
 
 initmap()
