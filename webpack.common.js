@@ -6,8 +6,8 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    index: './src/modules/index.js',
-    adventures: './src/modules/adventure.js'
+    index: './src/js/index.js',
+    adventures: './src/js/adventure.js'
   },
   optimization: {
     minimizer: [new UglifyJsPlugin()]
@@ -43,12 +43,6 @@ module.exports = {
           'file-loader'
         ]
       },
-      {
-         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-         use: [{
-           loader: 'file-loader'
-         }]
-       },
       {
       test: /\.css$/,
         use: [

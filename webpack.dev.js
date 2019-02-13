@@ -30,7 +30,13 @@ module.exports = merge(common, {
         options: {
           root: path.resolve(__dirname, 'src')
         }
-      }
+      },
+      {
+         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+         use: [{
+           loader: 'file-loader'
+         }]
+       }
     ]
   }
 });

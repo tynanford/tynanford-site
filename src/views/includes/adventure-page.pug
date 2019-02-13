@@ -63,7 +63,7 @@ section
       .card
         .content
           header.card-header
-            p.card-header-title Camping in Badlands National Park, South Dakota 
+            p.card-header-title Camping in Badlands National Park, South Dakota. Saw lots and lots of bison and prairie dogs. Extremely hot. 
           .card-image
             .carousel.carousel-animated.carousel-animate-slide
               .carousel-container
@@ -125,7 +125,7 @@ section
       .card
         .content
           header.card-header
-            p.card-header-title Cloudy day at Grand Teton National Park but was still incredible 
+            p.card-header-title Cloudy day at Grand Teton National Park but it  was still incredible to see. Gives me a reason to go back. 
           .card-image
             figure.image.is-16by9
               img(src='' data-src=require('../../images/modal/tetons.jpg'), alt='Grand Tetons').lazy_load
@@ -288,8 +288,13 @@ section
                   figure.image.is-16by9
                     img(src='' data-src=require('../../images/modal/chinatown.jpg'), alt='Chinatown').lazy_load.is-background
                 .carousel-item.has-background
-                  figure.image.is-16by9
-                    img(src='' data-src=require('../../images/modal/mural.jpg'), alt='Mural in San Francisco').lazy_load.is-background
+                  .columns
+                    .column.is-6
+                      figure.image.is-square
+                        img(src='' data-src=require('../../images/modal/san-fran.jpg'), alt='San Francisco Palm Trees').lazy_load.is-background
+                    .column.is-6
+                      figure.image.is-square
+                        img(src='' data-src=require('../../images/modal/san-fran-port.jpg'), alt='Port of San Francisco').lazy_load.is-background
               .carousel-navigation.is-centered
                 .carousel-nav-left
                   i.fa.fa-chevron-left(aria-hidden="true")
