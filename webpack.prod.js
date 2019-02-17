@@ -23,8 +23,8 @@ module.exports = merge(common, {
            loader: 'file-loader',
            options: {
              name: '[name].[ext]',
-             outputPath: 'fonts/',    // where the fonts will go
-             publicPath: '../fonts'       // override the default path
+             outputPath: 'font/',    // where the fonts will go
+             publicPath: '../font'       // override the default path
            }
          }]
        },
