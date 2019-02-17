@@ -54,8 +54,8 @@ function initmap() {
   
 	// set up the map
 	map = new L.Map('map', {
-    center: [39.5, -96.5],
-    zoom: 4.5,
+    center: [40.7, -104.5],
+    zoom: 4.85,
     zoomSnap: 0
   });
 
