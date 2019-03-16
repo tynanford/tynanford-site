@@ -18,13 +18,18 @@ module.exports = {
       title: 'Tynan Ford | Software Developer',
       chunks: ['index'],
       template: './src/views/index.pug',
-      filename: 'index.html'
+      filename: 'index.html',
+      data: require('./src/content/index.json')
     }),
     new HtmlWebpackPlugin({
       title: 'Adventures',
       chunks: ['adventures'],
       filename: 'adventures.html',
-      template: './src/views/adventure.pug'
+      template: './src/views/adventure.pug',
+      data: {
+        multiPic: require('./src/content/adventure/multi-pic-location.json'),
+        singlePic: require('./src/content/adventure/single-pic-location.json')
+      }
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

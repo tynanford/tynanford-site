@@ -1,0 +1,200 @@
+{
+  "badlands": {
+    "id": "badlandModal",
+    "desc": "Camping in Badlands National Park, South Dakota. Saw lots and lots of bison and prairie dogs. Extremely hot.",
+    "footer": "Days 2-4",
+    "images": {
+      "1": {
+        "src": "badlands",
+        "alt": "Badlands South Dakota"
+      },
+      "2": {
+        "src": "badland-bison",
+        "alt": "Bison at Badlands"
+      },
+      "3": {
+        "src": "badland-sunset",
+        "alt": "Sunset at Badlands"
+      }
+    }
+  },
+  "yellowstone": {
+    "id": "yellowstoneModal",
+    "desc": "Amazing time in Yellowstone National Park, Wyoming",
+    "footer": "Days 5-8 ",
+    "images": {
+      "1": {
+        "src": "yellowstone-lake",
+        "alt": "Yellowstone Lake"
+      },
+      "2": {
+        "src": "yellowstone-canyon",
+        "alt": "Grand Canyon at Yellowstone"
+      },
+      "3": {
+        "src": "yellowstone-grand-pristine",
+        "alt": "Grand Pristine"
+      },
+      "4": {
+        "src": "yellowstone-river",
+        "alt": "Yellowstone River"
+      }
+    }
+  },
+  "mountHood": {
+    "id": "mountHoodModal",
+    "desc": "My favorite place of the whole trip :) Mount Hood, Oregon",
+    "footer": "Days 11-13",
+    "images": {
+      "1": {
+        "src": "mount-hood",
+        "alt": "Mount Hood"
+      },
+      "2": {
+        "src": "hood-camp",
+        "alt": "Campsite at Mount Hood"
+      },
+      "3": {
+        "src": "hood-waterfall",
+        "alt": "Sitting behind the waterfall"
+      }
+    }
+  },
+  "oregonCoast": {
+    "id": "oregonCoastModal",
+    "desc": "Seeing the Pacific in Oregon was the most amazing single thing I saw on the trip. Gave some prespective on how far we had driven.",
+    "footer": "Day 16",
+    "images": {
+      "1": {
+        "src": "oregon-rock",
+        "alt": "Pacific City Rock"
+      },
+      "2": {
+        "src": "oregon-waves",
+        "alt": "Pacific waves"
+      },
+      "3": {
+        "src": "oregon-pacific",
+        "alt": "Pacific Oregon"
+      },
+      "4": {
+        "src": "oregon-beach",
+        "alt": "Beach Oregon"
+      }
+    }
+  },
+  "redwoods": {
+    "id": "giantsModal",
+    "desc": "BIG Trees! Avenue of the Giants, California",
+    "footer": "Day 17",
+    "images": {
+      "1": {
+        "src": "redwoods",
+        "alt": "Redwoods"
+      },
+      "2": {
+        "src": "redwoods-car",
+        "alt": "Redwood and a Ford Focus"
+      }
+    }
+  },
+  "route1": {
+    "id": "route1Modal",
+    "desc": "Route 1, California. 7 hour drive along the Pacific. Views like this the entire time.",
+    "footer": "Day 18",
+    "images": {
+      "1": {
+        "src": "route1",
+        "alt": "Route 1"
+      },
+      "2": {
+        "src": "route1-wind",
+        "alt": "Pacific"
+      },
+      "3": {
+        "src": "route1-water",
+        "alt": "Big waves"
+      },
+      "4": {
+        "src": "route1-sunset",
+        "alt": "Sunset near Point Reyes"
+      }
+    }
+  },
+  "sanFran": {
+    "id": "sanFranModal",
+    "desc": "Toured San Francisco for a day. The Golden Gate Bridge is spectacular. Had the best Chinese food in my life for dinner.",
+    "footer": "Day 19",
+    "images": {
+      "1": {
+        "src": "san-fran-pacific",
+        "alt": "Golden Gate"
+      },
+      "2": {
+        "src": "chinatown",
+        "alt": "Chinatown"
+      },
+      "3": {
+        "src": "san-fran",
+        "alt": "San Francisco Palm Trees"
+      },
+      "4": {
+        "src": "san-fran-port",
+        "alt": "Port of San Francisco"
+      }
+    }
+  },  
+  "grandCanyon": {
+    "id": "grandCanyonModal",
+    "desc": "Amazing views in Arizona and not too hot! ",
+    "footer": "Days 23-24",
+    "images": {
+      "1": {
+        "src": "grand-canyon",
+        "alt": "Grand Canyon"
+      },
+      "2": {
+        "src": "grand-canyon-river",
+        "alt": "Grand Canyon river view"
+      }
+    }
+  },
+  "monumentValley": {
+    "id": "mValleyModal",
+    "desc": "Driving on roads from famous movies at the border of Arizona and Utah ",
+    "footer": "Day 24",
+    "images": {
+      "1": {
+        "src": "monument-valley-1",
+        "alt": "Monument Valley"
+      },
+      "2": {
+        "src": "monument-valley-2",
+        "alt": "Monument Valley"
+      }
+    }
+  },
+  "mesaVerde": {
+    "id": "mesaVerdeModal",
+    "desc": "Meas Verde National Park, CO. Most surprising place of the trip. First thought of it just as a place to camp, but fell in love after a sunset hike up a mountain :)",
+    "footer": "Days 24-25",
+    "images": {
+      "1": {
+        "src": "mesa-verde-mountains",
+        "alt": "Mesa Verde"
+      },
+      "2": {
+        "src": "mesa-verde",
+        "alt": "Mesa Verde"
+      },
+      "3": {
+        "src": "mesa-verde-me",
+        "alt": "Mesa Verde"
+      },
+      "4": {
+        "src": "mesa-verde-sunset",
+        "alt": "Mesa Verde"
+      }
+    }
+  }
+}

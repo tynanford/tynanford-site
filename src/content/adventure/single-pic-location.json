@@ -1,0 +1,57 @@
+{
+  "mississippi": {
+    "id": "mississippiModal",
+    "desc": "Crossing the Mississippi at LaCrosse, WI. I was super excited in the beginning so I was taking lots of pictures",
+    "footer": "Day 2",
+    "image": {
+        "src": "mississippi",
+        "alt": "Mississippi River in LaCrosse, WI"
+    }
+  },
+  "grandTeton": {
+    "id": "tetonModal",
+    "desc": "Cloudy day at Grand Teton National Park but it  was still incredible to see. Gives me a reason to go back.",
+    "footer": "Day 8",
+    "image": {
+      "src": "tetons",
+      "alt": "Grand Tetons"
+    }
+  },
+  "seattle": {
+    "id": "seattleModal",
+    "desc": "Back in civilization in Seattle.",
+    "footer": "Day 11",
+    "image": {
+      "src": "seattle",
+      "alt": "Gas Works Seattle"
+    }
+  },
+  "cityOfAngels": {
+    "id": "laModal",
+    "desc": "Spent the night in downtown LA watching baseball. LA is cool.",
+    "footer": "Day 20",
+    "image": {
+      "src": "la-dodgers",
+      "alt": "Dodger stadium"
+    }
+  },
+  "santaMonica": {
+    "id": "santaMonicaModal",
+    "desc": "Alpha and I spent an entire day on the beach relaxing and planning our next moves. The warm weather felt good after Wyoming and the Pacific Northwest.",
+    "footer": "Day 21",
+    "image": {
+      "src": "la-beach",
+      "alt": "Me and Alpha at the beach"
+    }
+  },
+  "rockies": {
+    "id": "rockiesModal",
+    "desc": "Didn't have time to drive up Pike's Peak but still got great views of the mountains in Colorado. I definately have to come back to explore more.",
+    "footer": "Day 26",
+    "image": {
+      "src": "rockies",
+      "alt": "Rockies"
+    }
+  }
+}
+
