@@ -19,7 +19,9 @@ module.exports = {
       chunks: ['index'],
       template: './src/views/index.pug',
       filename: 'index.html',
-      data: require('./src/content/index.json')
+      data: {
+        main: require('./src/content/index.json')
+      }
     }),
     new HtmlWebpackPlugin({
       title: 'Adventures',
@@ -27,6 +29,7 @@ module.exports = {
       filename: 'adventures.html',
       template: './src/views/adventure.pug',
       data: {
+        main: require('./src/content/adventure-page.json'),
         multiPic: require('./src/content/adventure/multi-pic-location.json'),
         singlePic: require('./src/content/adventure/single-pic-location.json')
       }

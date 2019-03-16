@@ -1,7 +1,31 @@
 {
-  "sections": {
-    "hero": {
-      "title": "Lorem ipsum dolor sit"
+  "navbar": {
+    "imageLink": "#hero",
+    "itemLinks": {
+      "1": {
+        "link": "#about",
+        "text": "About"
+      },
+      "2": {
+        "link": "#skills",
+        "text": "Skills"
+      },
+      "3": {
+        "link": "#experience",
+        "text": "Experience"
+      },
+      "4": {
+        "link": "#school",
+        "text": "School"
+      },
+      "5": {
+        "link": "#adventures",
+        "text": "Adventures"
+      },
+      "6": {
+        "link": "#contact",
+        "text": "Contact"
+      }
     }
   }
 }

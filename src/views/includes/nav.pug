@@ -1,7 +1,7 @@
 nav.navbar.is-fixed-top(aria-label='main navigation')
   .container
     .navbar-brand
-      a.navbar-item(href='#hero')
+      a.navbar-item(href=htmlWebpackPlugin.options.data.main.navbar.imageLink)
         img.image(src=require('../../images/logo.png'), alt='Logo')
       #nav-toggle.navbar-burger
         span(aria-hidden='true')
@@ -9,12 +9,8 @@ nav.navbar.is-fixed-top(aria-label='main navigation')
         span(aria-hidden='true')
     #nav-menu.navbar-menu
       .navbar-end
-        a.navbar-item(href='#about') About
-        a.navbar-item(href='#skills') Skills
-        a.navbar-item(href='#experience') Experience
-        a.navbar-item(href='#school') School
-        a.navbar-item(href='#adventures') Adventures
-        a.navbar-item(href='#contact') Contact
+        each i in htmlWebpackPlugin.options.data.main.navbar.itemLinks
+          a.navbar-item(href=i.link)= i.text
         a.navbar-item(href='https://github.com/tynanford', target='_blank')
           img.image(src=require('../../images/GitHub-logo.png'), alt='github')
         a.navbar-item(href='https://www.linkedin.com/in/tynan-ford-300307176', target='_blank')
