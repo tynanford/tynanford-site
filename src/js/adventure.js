@@ -20,9 +20,6 @@ var map_initialized = false;
 $(document).ready(function() { 
   var carousels = bulmaCarousel.attach();
   $("#mapModalButton").click(function(){
-    setTimeout(function() {
-      map.invalidateSize();
-    }, 10);
     // lazy load json files since they're pretty huge
     if (!map_initialized) {
       import(/* webpackChunkName: "westTrip" */ './westTrip.json').then( module => {
@@ -51,6 +48,9 @@ function initmap(lineJson, markersJson) {
     zoom: 4.85,
     zoomSnap: 0
   });
+  setTimeout(function() {
+    map.invalidateSize();
+  }, 10);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -99,7 +99,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-function closeModal(e, modal) {
+function closeModal(e, modal, html) {
   e.preventDefault();
   modal.classList.remove('is-active');
   html.classList.remove('is-clipped');
@@ -116,9 +116,9 @@ function openModal(modalID) {
   html.classList.add('is-clipped');
 
   modal.querySelector('.modal-background').addEventListener('click', function(e) {
-    closeModal(e, modal);
+    closeModal(e, modal, html);
   });
   modal.querySelector('#close-modal').addEventListener('click', function(e) {
-    closeModal(e, modal);
+    closeModal(e, modal, html);
   });
 }

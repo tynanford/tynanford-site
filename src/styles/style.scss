@@ -63,16 +63,30 @@ $modal-content-width: 1000px;
 .level-item {
   justify-content: center;
 }
-
+/* idk if this is needed yet or not now that the map is in a modal
+@media (min-width: 681px) {
+  
+  #map {
+    height: 640px;
+    z-index: 1;
+  }
+  
+}
+@media (min-width: 120px) and (max-width: 680px) {
+  
+  #map {
+    height: 300px;
+    z-index: 1;
+  }
+  
+}
+*/
 #map {
   height: 640px;
   z-index: 1;
 }
-
-.tile {
-  border-radius: 5px;
-  padding: .7rem;
-  color: white;
+.tile.is-parent {
+  cursor: pointer;
 }
 
 @font-face {
