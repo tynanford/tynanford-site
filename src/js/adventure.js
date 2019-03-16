@@ -8,30 +8,13 @@ import westTrip from './westTrip.json';
 import westTripMarkers from './westTripMarkers.json';
 
 if (process.env.NODE_ENV === 'development') {
-  require('../views/adventure.pug')
-  require('../views/layout.pug')
-  require('../views/includes/head.pug')
-  require('../views/includes/footer.pug')
-  require('../views/includes/adventure-page.pug')
+  require('../views/adventure.pug');
+  require('../views/includes/nav.pug');
+  require('../views/layout.pug');
+  require('../views/includes/head.pug');
+  require('../views/includes/footer.pug');
+  require('../views/includes/adventure-page.pug');
 }
-
-
-function turnOffNav() {
-    var nav = document.getElementById("nav-menu");
-    nav.className = "navbar-menu";
-}
-
-document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
-function toggleNav() {
-    var nav = document.getElementById("nav-menu");
-    var className = nav.getAttribute("class");
-    if(className == "navbar-menu") {
-        nav.className = "navbar-menu is-active";
-    } else {
-        nav.className = "navbar-menu";
-    }
-}
-
 
 $(document).ready(function() { 
   var carousels = bulmaCarousel.attach();
