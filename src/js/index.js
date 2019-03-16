@@ -19,7 +19,6 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/footer.pug');
 }
 
-
 $(document).ready(function() { 
   var accordions = bulmaAccordion.attach();
 });

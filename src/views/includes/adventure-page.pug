@@ -3,21 +3,25 @@ section#hero.hero.is-primary.is-medium.is-bold
     .container.has-text-centered
       br
       h1.title.is-1
-        | Out West Road Trip! 
+        | My Adventures
       h3.subtitle.is-3
-        | 28 days on the road with my best friend Alpha 
+        | Click buttons below to see where I went!
 br
 
 section
   .container.has-text-centered
     .content
-      .h3.is-size-3.has-text-link.has-text-weight-bold Click on the markers to see some of the photos I took!
-    
+      .button#mapModalButton.is-link.is-large Out West Trip
 
 section
   br
-  .container
-    #map
+  .modal#mapModal
+    .modal-background
+    .modal-content
+      .container.has-text-centered
+        .h3.is-size-3.has-text-link.has-text-weight-bold Click on the markers to see some of the photos I took!
+        #map
+    button.modal-close.is-large#close-modal
 
 each loc in htmlWebpackPlugin.options.data.multiPic
   div(id=loc.id).modal

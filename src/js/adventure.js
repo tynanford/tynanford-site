@@ -4,8 +4,7 @@ require('../../node_modules/leaflet/dist/leaflet.js');
 require('../../node_modules/bulma-carousel/dist/js/bulma-carousel.min.js');
 import bulmaCarousel from '../../node_modules/bulma-carousel/dist/js/bulma-carousel.min.js';
 require('./SnakeAnim.js');
-import westTrip from './westTrip.json';
-import westTripMarkers from './westTripMarkers.json';
+
 
 if (process.env.NODE_ENV === 'development') {
   require('../views/adventure.pug');
@@ -16,27 +15,38 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/adventure-page.pug');
 }
 
+var map_initialized = false;
+
 $(document).ready(function() { 
   var carousels = bulmaCarousel.attach();
+  $("#mapModalButton").click(function(){
+    setTimeout(function() {
+      map.invalidateSize();
+    }, 10);
+    // lazy load json files since they're pretty huge
+    if (!map_initialized) {
+      import(/* webpackChunkName: "westTrip" */ './westTrip.json').then( module => {
+          var westTrip = module;
+          import(/* webpackChunkName: "westTripMarkers" */ './westTripMarkers.json').then( module => {
+            initmap(westTrip, module);
+          });
+      });
+      map_initialized = true;
+    }
+    openModal("mapModal");
+  });
 });
 
-var map;
-var ajaxRequest;
-var plotlist;
-var plotlayers=[];
 
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
+function initmap(lineJson, markersJson) {
+  // set up the map
+  delete L.Icon.Default.prototype._getIconUrl;
+  L.Icon.Default.mergeOptions({
     iconRetinaUrl: require('../../node_modules/leaflet/dist/images/marker-icon-2x.png'),
     iconUrl: require('../../node_modules/leaflet/dist/images/marker-icon.png'),
     shadowUrl: require('../../node_modules/leaflet/dist/images/marker-shadow.png')
-});
-
-function initmap() {
-  
-	// set up the map
-	map = new L.Map('map', {
+  });
+	var map = new L.Map('map', {
     center: [40.7, -104.5],
     zoom: 4.85,
     zoomSnap: 0
@@ -56,20 +66,20 @@ function initmap() {
       "snakingSpeed": 500
   };
 
-  L.geoJSON(westTrip, {
+  L.geoJSON(lineJson, {
     style: myStyle 
   }).addTo(map).snakeIn();
 
-var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "#ff7800",
-    color: "#000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
+  var geojsonMarkerOptions = {
+      radius: 8,
+      fillColor: "#ff7800",
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+  };
 
-  L.geoJSON(westTripMarkers, {
+  L.geoJSON(markersJson, {
       onEachFeature: onEachFeature,
       pointToLayer: function (feature, latlng) {
           return L.marker(latlng, geojsonMarkerOptions);
@@ -89,6 +99,12 @@ function onEachFeature(feature, layer) {
     }
 }
 
+function closeModal(e, modal) {
+  e.preventDefault();
+  modal.classList.remove('is-active');
+  html.classList.remove('is-clipped');
+}
+
 function openModal(modalID) {
   $('.lazy_load').each(function(){
       var img = $(this);
@@ -100,17 +116,9 @@ function openModal(modalID) {
   html.classList.add('is-clipped');
 
   modal.querySelector('.modal-background').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
+    closeModal(e, modal);
   });
   modal.querySelector('#close-modal').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
+    closeModal(e, modal);
   });
-
-
 }
-
-initmap()
