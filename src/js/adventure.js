@@ -15,27 +15,61 @@ if (process.env.NODE_ENV === 'development') {
   require('../views/includes/adventure-page.pug');
 }
 
-var map_initialized = false;
+var west_map_initialized = false;
+var spring_map_initialized = false;
 
 $(document).ready(function() { 
   var carousels = bulmaCarousel.attach();
-  $("#mapModalButton").click(function(){
+
+  $("#springBreakMapModalButton").click(function(){
     // lazy load json files since they're pretty huge
-    if (!map_initialized) {
+    if (!spring_map_initialized) {
       import(/* webpackChunkName: "westTrip" */ './westTrip.json').then( module => {
           var westTrip = module;
           import(/* webpackChunkName: "westTripMarkers" */ './westTripMarkers.json').then( module => {
-            initmap(westTrip, module);
+            var map = new L.Map('map', {
+              center: [100.7, -104.5],
+              zoom: 4.85,
+              zoomSnap: 0
+            });
+            setTimeout(function() {
+              map.invalidateSize();
+            }, 10);
+            initmap(map, westTrip, module);
           });
       });
-      map_initialized = true;
+      spring_map_initialized = true;
+    }
+    openModal("mapModal");
+  });
+
+
+
+  $("#westMapModalButton").click(function(){
+    // lazy load json files since they're pretty huge
+    if (!west_map_initialized) {
+      import(/* webpackChunkName: "westTrip" */ './westTrip.json').then( module => {
+          var westTrip = module;
+          import(/* webpackChunkName: "westTripMarkers" */ './westTripMarkers.json').then( module => {
+            var map = new L.Map('map', {
+              center: [40.7, -104.5],
+              zoom: 4.85,
+              zoomSnap: 0
+            });
+            setTimeout(function() {
+              map.invalidateSize();
+            }, 10);
+            initmap(map, westTrip, module);
+          });
+      });
+      west_map_initialized = true;
     }
     openModal("mapModal");
   });
 });
 
 
-function initmap(lineJson, markersJson) {
+function initmap(map, lineJson, markersJson) {
   // set up the map
   delete L.Icon.Default.prototype._getIconUrl;
   L.Icon.Default.mergeOptions({
@@ -43,14 +77,6 @@ function initmap(lineJson, markersJson) {
     iconUrl: require('../../node_modules/leaflet/dist/images/marker-icon.png'),
     shadowUrl: require('../../node_modules/leaflet/dist/images/marker-shadow.png')
   });
-	var map = new L.Map('map', {
-    center: [40.7, -104.5],
-    zoom: 4.85,
-    zoomSnap: 0
-  });
-  setTimeout(function() {
-    map.invalidateSize();
-  }, 10);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
